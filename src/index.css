@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.win-text {
+  opacity: 0;
+
+  animation: 1.4s ease 0.4s infinite scaleAnimation;
+}
+
+.card {
+  position: relative;
+  perspective: 30rem;
+  cursor: pointer;
+}
+
+.solved {
+  transition: all 0.5s;
+}
+
+.card:disabled {
+  cursor: default;
+}
+
+.card.solved:disabled {
+  opacity: 0;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card.selected .card-back {
+  transform: rotateY(0);
+}
+
+.card.selected .card-front {
+  transform: rotateY(-180deg);
+}
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+
+  50% {
+    opacity: 100%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0%;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+}
