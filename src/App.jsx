@@ -122,7 +122,7 @@ function App() {
           )}
         </div>
       </div>
-      <div className="w-full mt-10 md:fixed md:top-[50%] md:h-screen md:w-auto md:left-10 md:translate-y-[-50%]">
+      <div className="w-full mt-10 md:fixed md:mt-0 md:top-[50%] md:h-screen md:w-auto md:left-10 md:translate-y-[-50%]">
         <div className="flex items-center h-full gap-4 md:gap-8 md:flex-col">
           <span className="bg-neutral-700 h-[1px] w-full md:h-full md:w-[2px]" />
           <a
