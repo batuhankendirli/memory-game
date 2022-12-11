@@ -10,7 +10,7 @@ export const cards = [
   },
   {
     id: 'card-vue',
-    imgUrl: 'https://vuejs.org/images/logo.png',
+    imgUrl: 'https://img001.prntscr.com/file/img001/W8th99MQTkWCJ2tnFZu4Qw.png',
   },
   {
     id: 'card-svelte',
@@ -19,15 +19,15 @@ export const cards = [
   },
   {
     id: 'card-html',
-    imgUrl: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
+    imgUrl: 'https://img001.prntscr.com/file/img001/Gi10gnl8SlaOrtP2oVm5XQ.png',
   },
   {
     id: 'card-css',
-    imgUrl: 'https://cdn-icons-png.flaticon.com/512/732/732190.png',
+    imgUrl: 'https://img001.prntscr.com/file/img001/LHbAIRRUScye9ruTuzsTVg.png',
   },
   {
     id: 'card-angular',
-    imgUrl: 'https://angular.io/assets/images/logos/angular/angular.png',
+    imgUrl: 'https://img001.prntscr.com/file/img001/T21t5DfrT36TtC911vMrAw.png',
   },
   {
     id: 'card-typescript',

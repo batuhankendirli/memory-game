@@ -7,6 +7,8 @@ function ContextProvider({ children }) {
   const [solved, setSolved] = useState([]);
   const [isEnded, setIsEnded] = useState(false);
   const [restart, setRestart] = useState(false);
+  const [isStarted, setIsStarted] = useState(false);
+  const [totalMoves, setTotalMoves] = useState(0);
 
   useEffect(() => {
     if (selectedCards.length === 2) {
@@ -34,6 +36,10 @@ function ContextProvider({ children }) {
         setIsEnded,
         restart,
         setRestart,
+        totalMoves,
+        setTotalMoves,
+        isStarted,
+        setIsStarted,
       }}
     >
       {children}

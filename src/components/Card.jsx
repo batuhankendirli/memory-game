@@ -3,13 +3,22 @@ import { Context } from '../Context';
 
 const Card = ({ img, id }) => {
   const [active, setActive] = useState(false);
-  const { selectedCards, setSelectedCards, solved, restart, setRestart } =
-    useContext(Context);
+  const {
+    selectedCards,
+    setSelectedCards,
+    solved,
+    restart,
+    setRestart,
+    setTotalMoves,
+    setIsStarted,
+  } = useContext(Context);
 
   const handleClick = () => {
     setActive(true);
+    setIsStarted(true);
     if (!active) {
       setSelectedCards((prev) => [...prev, id]);
+      setTotalMoves((prevMoves) => prevMoves + 1);
     }
   };
 
@@ -30,24 +39,25 @@ const Card = ({ img, id }) => {
     }
   }, [restart]);
 
+  console.log(img);
   return (
     <button
-      className={`w-32 h-32 card ${active ? 'selected' : ''} ${
-        solved.includes(id) ? 'solved' : ''
-      }`}
+      className={`w-[4.8rem] h-[4.8rem]  select-none card ${
+        active ? 'selected' : ''
+      } ${solved.includes(id) ? 'solved' : ''} sm:w-32 sm:h-32`}
       onClick={handleClick}
       disabled={solved.includes(id) || selectedCards.length === 2}
     >
-      <div className="card-front flex items-center justify-center bg-gradient-to-b from-yellow-600 via-orange-500 to-yellow-500">
-        <h1 className="text-4xl">?</h1>
+      <div className="card-front flex items-center justify-center bg-gradient-to-br from-emerald-600 to-green-500 rounded-xl">
+        <h1 className="text-4xl text-neutral-300">?</h1>
       </div>
-      <div className="card-back select-none">
-        <img
-          src={img}
-          alt={id}
-          className="w-full h-full object-cover pointer-events-none"
-        />
-      </div>
+      <div
+        className="card-back rounded-xl "
+        style={{
+          backgroundImage: `url('${img}')`,
+          backgroundSize: `cover`,
+        }}
+      ></div>
     </button>
   );
 };

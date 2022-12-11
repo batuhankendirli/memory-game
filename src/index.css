@@ -71,3 +71,13 @@ body {
     transform: translate(-50%, -50%) scale(0.95);
   }
 }
+
+.profile-link {
+  writing-mode: vertical-rl;
+}
+
+@media (max-width: 768px) {
+  .profile-link {
+    writing-mode: initial;
+  }
+}
