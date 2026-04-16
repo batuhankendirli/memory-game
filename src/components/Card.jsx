@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Context } from '../Context';
 
-const Card = ({ img, id }) => {
+const Card = ({ img, id, bgColor }) => {
   const [active, setActive] = useState(false);
+  const [showImage, setShowImage] = useState(false);
   const {
     selectedCards,
     setSelectedCards,
@@ -23,6 +24,17 @@ const Card = ({ img, id }) => {
   };
 
   useEffect(() => {
+    if (active) {
+      setShowImage(true);
+    } else {
+      const timer = setTimeout(() => {
+        setShowImage(false);
+      }, 800);
+      return () => clearTimeout(timer);
+    }
+  }, [active]);
+
+  useEffect(() => {
     if (selectedCards.length === 2) {
       if (selectedCards[0] !== selectedCards[1] && !solved.includes(id)) {
         setTimeout(() => {
@@ -39,7 +51,6 @@ const Card = ({ img, id }) => {
     }
   }, [restart]);
 
-  console.log(img);
   return (
     <button
       className={`w-[4.8rem] h-[4.8rem]  select-none card ${
@@ -52,10 +63,12 @@ const Card = ({ img, id }) => {
         <h1 className="text-4xl text-neutral-300">?</h1>
       </div>
       <div
-        className="card-back rounded-xl "
+        className="card-back rounded-xl"
         style={{
-          backgroundImage: `url('${img}')`,
-          backgroundSize: `cover`,
+          backgroundColor: showImage ? bgColor : 'transparent',
+          backgroundImage: showImage ? `url('${img}')` : 'none',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       ></div>
     </button>

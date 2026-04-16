@@ -31,6 +31,13 @@ function App() {
   } = useContext(Context);
 
   useEffect(() => {
+    cards.forEach((card) => {
+      const img = new Image();
+      img.src = card.imgUrl;
+    });
+  }, []);
+
+  useEffect(() => {
     if (solved.length === 8) {
       setIsEnded(true);
       setIsStarted(false);
@@ -109,7 +116,7 @@ function App() {
 
         <div className="relative grid grid-cols-4 gap-2 p-2 bg-neutral-700 rounded-xl shadow-xl sm:gap-4 sm:p-4">
           {cardDeck.map((card, index) => (
-            <Card key={index} id={card.id} img={card.imgUrl} />
+            <Card key={index} id={card.id} img={card.imgUrl} bgColor={card.bgColor} />
           ))}
           {isEnded && (
             <h3

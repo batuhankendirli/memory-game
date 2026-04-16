@@ -1,37 +1,42 @@
 export const cards = [
   {
     id: 'card-react',
-    imgUrl: 'https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png',
+    imgUrl: '/images/react.webp',
+    bgColor: '#23272f',
   },
   {
     id: 'card-js',
-    imgUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+    imgUrl: '/images/javascript.png',
+    bgColor: '#f7df1e',
   },
   {
     id: 'card-vue',
-    imgUrl: 'https://img001.prntscr.com/file/img001/W8th99MQTkWCJ2tnFZu4Qw.png',
+    imgUrl: '/images/vue.png',
+    bgColor: '#1D6143',
   },
   {
     id: 'card-svelte',
-    imgUrl:
-      'https://pbs.twimg.com/profile_images/1121395911849062400/7exmJEg4_400x400.png',
+    imgUrl: '/images/svelte.png',
+    bgColor: '#ff3e00',
   },
   {
     id: 'card-html',
-    imgUrl: 'https://img001.prntscr.com/file/img001/Gi10gnl8SlaOrtP2oVm5XQ.png',
+    imgUrl: '/images/html.png',
+    bgColor: '#B84300',
   },
   {
     id: 'card-css',
-    imgUrl: 'https://img001.prntscr.com/file/img001/LHbAIRRUScye9ruTuzsTVg.png',
+    imgUrl: '/images/css.png',
+    bgColor: '#264de4',
   },
   {
     id: 'card-angular',
-    imgUrl: 'https://img001.prntscr.com/file/img001/T21t5DfrT36TtC911vMrAw.png',
+    imgUrl: '/images/angular.png',
+    bgColor: '#dd0031',
   },
   {
     id: 'card-typescript',
-    imgUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+    imgUrl: '/images/typescript.png',
+    bgColor: '#3178c6',
   },
 ];
