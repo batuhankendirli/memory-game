@@ -116,7 +116,12 @@ function App() {
 
         <div className="relative grid grid-cols-4 gap-2 p-2 bg-neutral-700 rounded-xl shadow-xl sm:gap-4 sm:p-4">
           {cardDeck.map((card, index) => (
-            <Card key={index} id={card.id} img={card.imgUrl} bgColor={card.bgColor} />
+            <Card
+              key={index}
+              id={card.id}
+              img={card.imgUrl}
+              bgColor={card.bgColor}
+            />
           ))}
           {isEnded && (
             <h3
@@ -133,7 +138,7 @@ function App() {
         <div className="flex items-center h-full gap-4 md:gap-8 md:flex-col">
           <span className="bg-neutral-700 h-[1px] w-full md:h-full md:w-[2px]" />
           <a
-            href="https://batuhankendirli.netlify.app/"
+            href="https://www.batuhankendirli.com/"
             target={'_blank'}
             className="text-neutral-700 text-md duration-300 hover:text-emerald-600 profile-link whitespace-nowrap"
           >
