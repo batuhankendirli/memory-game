@@ -81,7 +81,7 @@ function App() {
     <div className="relative flex flex-col items-center justify-between px-2 py-8 min-h-screen  bg-neutral-800 sm:p-10">
       {isEnded && <ReactConfetti recycle={true} opacity={0.85} />}
       <h1
-        className="text-5xl text-center text-neutral-300 bg-gradient-to-l from-emerald-600 to-green-500 bg-clip-text mb-6"
+        className="text-5xl text-center text-neutral-300 bg-linear-to-l from-emerald-600 to-green-500 bg-clip-text mb-6"
         style={{
           WebkitTextFillColor: 'transparent',
         }}
@@ -106,7 +106,7 @@ function App() {
           </div>
           {isEnded && (
             <button
-              className="text-md py-0.5 px-2 bg-neutral-300 text-neutral-800 duration-300 hover:bg-neutral-50 rounded-lg sm:text-xl sm:py-1 sm:px-3"
+              className="text-md py-0.5 px-2 bg-neutral-300 text-neutral-800 duration-300 hover:bg-neutral-50 rounded-lg cursor-pointer sm:text-xl sm:py-1 sm:px-3"
               onClick={handleReset}
             >
               Restart
@@ -125,7 +125,7 @@ function App() {
           ))}
           {isEnded && (
             <h3
-              className={`text-xl absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center  text-neutral-300 win-text ${
+              className={`text-xl absolute top-[50%] left-[50%] text-center text-neutral-300 win-text ${
                 isEnded ? 'win-text-active' : ''
               } sm:text-2xl`}
             >

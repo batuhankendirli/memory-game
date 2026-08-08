@@ -59,7 +59,7 @@ const Card = ({ img, id, bgColor }) => {
       onClick={handleClick}
       disabled={solved.includes(id) || selectedCards.length === 2}
     >
-      <div className="card-front flex items-center justify-center bg-gradient-to-br from-emerald-600 to-green-500 rounded-xl">
+      <div className="card-front flex items-center justify-center bg-linear-to-br from-emerald-600 to-green-500 rounded-xl">
         <h1 className="text-4xl text-neutral-300">?</h1>
       </div>
       <div
